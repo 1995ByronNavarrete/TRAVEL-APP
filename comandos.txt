@@ -3,3 +3,6 @@ git branch nonbre_rama ->crear una rama
 git checkout nombre_rama_creada ->cambiar a la rama
 git branch -d nombre_rama
 git reset --hard codigo
+
+git tag version1.0 -m "version 1.0"
+git push --tags
