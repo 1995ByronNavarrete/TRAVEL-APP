@@ -1,0 +1,3 @@
+git log --oneline -> Saber en que rama esta
+git branch nonbre_rama ->crear una rama
+git checkout nombre_rama_creada ->cambiar a la rama
