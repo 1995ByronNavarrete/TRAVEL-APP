@@ -1,50 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRAVEL APP</title>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVEL APP</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./fontawesome-free/css/all.min.css">
 </head>
+
 <body>
-    <header class="header container-fluid">
-        <div class="container d-flex justify-content-end aling-items-center login-idiomas">
-            <a href="#" class="d-block my-auto text-decoration-none sesion">Iniciar Sesión</a>
-            <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Idiomas
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item text-dark" href="#">English</a></li>
-                  <li><a class="dropdown-item text-dark" href="#">Español</a></li>
-                  <li><a class="dropdown-item text-dark" href="#">français</a></li>
-                </ul>
-              </div>
+  <!-- Inicia el header -->
+  <header class="header container-fluid m-0 p-0">
+    <!-- login y idiomas -->
+    <section class="container d-flex justify-content-end aling-items-center login-idiomas">
+      <a href="#" class="d-block my-auto text-decoration-none sesion">Iniciar Sesión</a>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Idiomas
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item text-dark" href="#">English</a></li>
+          <li><a class="dropdown-item text-dark" href="#">Español</a></li>
+          <li><a class="dropdown-item text-dark" href="#">Français</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- termina login y idiomas -->
+
+    <!-- inicio del menu de navegación -->
+    <nav class="menu navbar navbar-expand-lg navbar-light bg-light m-0 p-0 container-fluid justify-content-between">
+      <div class="container p-2">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" alt="logo" width="150px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItem"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarItem">
+          <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll mr-0 fw-bold text-secondary">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hoteles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tours</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gastronomia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Interpretes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
         </div>
-    </header>
+      </div>
+    </nav>
+    <!-- termina el menu de navegación -->
+  </header>
+  <!-- Termina el header -->
+
+  <!-- Inicia el Slider -->
+  <div class="container-fluid m-0 p-0 ">
+    <div class="slider">
+      <div class="slider-slides">
+        <div class="slider-slide active">
+          <img src="./img/slider/slide1.jpg" alt="">
+        </div>
+
+        <div class="slider-slide">
+          <img src="./img/slider/slide2.jpg" alt="">
+        </div>
+
+        <div class="slider-slide">
+          <img src="./img/slider/slide3.jpg" alt="">
+        </div>
+
+        <div class="slider-slide">
+          <img src="./img/slider/slide4.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="bg-oscuro"></div>
+
+      <div class="slide-btns d-flex justify-content-between fw-bold">
+        <a class="prev ml-5" href="#">⏮️</a>
+        <a class="next mr-5" href="#">⏭️</a>
+      </div>
+
+      <ul
+        class="slide-redes d-flex justify-content-around justify-content-sm-around justify-content-md-end justify-content-lg-end align-items-center m-0 p-0">
+        <a href="#" class="my-auto"><span class="fab fa-facebook-f"></span></a>
+        <a href="#" class="my-auto"><span class="fab fa-twitter"></span></a>
+        <a href="#" class="my-auto"><span class="fab fa-instagram"></span></a>
+        <a href="#" class="my-auto"><span class="fab fa-youtube"></span></a>
+        <a href="#" class="my-auto"><span class="fab fa-pinterest-p"></span></a>
+      </ul>
+    </div>
+  </div>
+  <!-- Termina el Slider -->
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js" type="module"></script>
 </body>
+
 </html>
