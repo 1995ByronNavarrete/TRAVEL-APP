@@ -42,5 +42,5 @@ export default function slider(){
         }
 
         $slides[i].classList.add("active");
-    },3000);
+    },3500);
 }

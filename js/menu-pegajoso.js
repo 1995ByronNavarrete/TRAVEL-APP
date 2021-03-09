@@ -7,9 +7,7 @@ export default function menuPegajoso(){
     
 
     w.addEventListener("scroll", e => {
-        console.log(w.scrollY, altura);
-        if(w.scrollY >= altura -38){
-            console.log(altura, w.scrollY)
+        if(w.scrollY >= altura - 39){
             $menu.classList.add("sticky-top");
         }else{
             $menu.classList.remove("sticky-top");

@@ -1,5 +1,6 @@
-/* ******** Reset CSS ******** */
+/* ******** Reset CSS ESTILOS GENERALES ******** */
 :root{
+    --default-color: #fff;
     --base-color: #1b263b;
     --second-color:#5d7ebfdb;
     --btn-orange:#f9530a;
@@ -10,11 +11,19 @@
     --titulo-size: 1rem;
     --sub-titulo-size: 0.875rem;
     --parrafos-size: 0.75rem;
+    --nivel-maximo-m:1000;
+    --nivel-maximo: 999;
+    --nivel-medium: 600;
+    --nivel-bajo: 100;
+    --nivel-muy-bajo:10;
 }
 
 html{
     box-sizing: border-box;
-    
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 *,
@@ -34,7 +43,7 @@ img{
     height: auto;
 }
 
-/****Estilos del header "login-idiomas"**/
+/*------ PARTE SUPERIOR DONDE SE ENCUENTRA EL LOGIN Y IDIOMAS -----*/
 .header{
     background-color: var(--base-color);
 }
@@ -50,7 +59,7 @@ img{
     color: var(--second-color);
 }
 
-/* Visor de imagenes*/
+/*------ SLIDER Y SUS COMPONENTES -----*/
 .slider{
     position: relative;
     width:100%;
@@ -73,6 +82,7 @@ img{
     height: 100%;
     opacity: 0;
     visibility: hidden;
+    transition: 1s all ease-in-out;
 }
 
 .slider-slide img{
@@ -88,7 +98,7 @@ img{
     height: 70px;
     bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: var(--nivel-bajo);
 }
 
 .slide-redes a{
@@ -112,34 +122,36 @@ img{
     position: absolute;
     width: 100%;
     top: 40%;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 
 .slide-btns a{
     display: block;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     text-decoration: none;
-    color: #fff;
     transition: all 0.3s ease;
+    color: #4d4d4d;
+    background-color: rgba(255, 255, 255, 0.467);
+    border-radius: 50%;
     opacity: .6;
-    z-index:20;
+    z-index:var(--nivel-bajo);
 }
 
 .slide-btns a:hover{
-    color: #4d4d4d
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 53, 53);
 }
 
 .slider-slide.active{
     opacity: 1;
     visibility: visible;
-    transition: 1s all ease;
 }
 
 .bg-oscuro{
     position: absolute;
-    z-index:10;
+    z-index:var(--nivel-muy-bajo);
     top: 0;
     left: 0;
     right:0;
@@ -147,8 +159,30 @@ img{
     background-color: rgba(9, 9, 9, 0.322);
 }
 
+.slide-contenido{
+    position: absolute;
+    z-index: 100;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    text-align: left;
+}
 
-/* color de las redes del visor de las imagenes*/
+.slide-contenido h3{
+    display: block;
+    color: #fff;
+    font-size: 2.8rem;
+}
+
+.slide-contenido p{
+    color: #fff;
+    font-size: 1.3rem;
+    word-spacing: 0px;
+    word-wrap: break-word;
+}
+
+
+/*-------- REDES SOCIALES PERTENECEN AL SLIDER ------*/
 .fa-facebook-f{
     color:#FFF;
     background-color: #3b5998;
@@ -176,10 +210,136 @@ img{
     background-color: #bd081c;
 }
 
-/* menu pegajoso */
+/*----- MENU PEGAJOSO PERTENECE AL MENU ------*/
 .sticky-top {
    position: fixed;
    top:0;
-   z-index:999;
+   z-index: var(--nivel-maximo-m);
    transition: .1s all ease-in-out;
 }
+
+/*-------- SERVICIOS ------- */
+.servicios{
+    background-color: var(--base-color);
+    color:#fff;
+    height: auto;
+}
+
+.servicios .titulo-servicios h3{
+    font-size: 2rem;
+}
+
+.servicios .titulo-servicios p{
+    font-size: var(--titulo-size);
+}
+
+.servicios .titulo-servicios hr{
+    width: 10%;
+    border:1px solid var(--btn-orange);
+}
+
+.servicios-all{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    text-align: center;
+}
+
+.servicios-all .servicio{
+    width: inherit;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.servicios-all .servicio span{
+    font-size: 50px;
+    text-shadow: 1px 1px 4px #fff;
+}
+
+.servicios-all .servicio h4{
+    font-size: 2rem;
+}
+
+.servicios-all .servicio p{
+    font-size: var(--titulo-size);
+}
+
+.color-orange{
+    color: var(--btn-orange);
+}
+
+
+/* ------- HOTELES SECTION DE LAS TARGETAS -------- */
+    .hoteles{
+        height: 500px;
+    }
+
+    .targeta{
+        position: relative;
+        overflow: hidden;
+        height: 450px;
+    }
+
+    .targeta::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 96%;
+        height: 100%;
+        border-radius: 0% 100% 0% 0%;
+        z-index: var(--nivel-muy-bajo);
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 4%, rgba(113,126,154,1) 38%, rgba(40,54,80,1) 70%, rgba(20,33,57,1) 100%);
+    }
+
+    .targeta img{
+        position:absolute;
+        z-index: var(--nivel-medium);
+        bottom: 0;
+        right: 0;
+        width: 85%;
+    }
+
+    .targeta h4{
+        color: #fff;
+        position: absolute;
+        left: 3%;
+        top: 20%;
+        font-size:5rem;
+        font-weight: bold;
+        z-index: var(--nivel-maximo);
+        text-shadow: 3px 3px 5px #000;
+    }
+
+    .targeta a{
+        position: absolute;
+        left: 8%;
+        top: 45%;
+        z-index: var(--nivel-maximo);
+    }
+
+    .targetas-hijas p{
+        font-size: var(--titulo-size);
+        color: var(--parrafos-color);
+    }
+
+    .targetas-hijas h4{
+        background-color: var(--base-color);
+        color: var(--default-color);
+        font-size: var(--titulo-size);
+    }
+
+    .targetas-hijas h3{
+        border-bottom: 1px solid rgb(162, 162, 162);
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 3px;
+    }
+
+    @media screen and (max-width:576px){
+        .targetas-hijas{
+            display: none;
+        }
+    }
