@@ -388,3 +388,44 @@ img{
             display: none;
         }
     }
+
+    /* RESTAURANTES */
+    .restaurantes{
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .rest-imagen{
+        width: inherit;
+        height: 500px;
+    }
+
+    .rest-imagen img{
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        object-position: 0% 0% 100% 0;
+    }
+
+    .rest-info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom:0;
+        width: inherit;
+        height: inherit;
+        background-color: rgba(0, 0, 0, 0.624);
+        color: #fff; 
+    }
+
+    .rest-info .content h4{
+        font-size: var(--titulo-size);
+    }
+
+    .rest-info .content h3{
+        font-size: 3rem;
+        font-weight: bold;
+    }
